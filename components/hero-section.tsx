@@ -8,20 +8,18 @@ export function HeroSection() {
   return (
     <section className="mx-auto grid min-h-[78vh] w-full max-w-6xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:px-12 lg:py-20">
       <div className="max-w-4xl">
-        <div className="flex items-start gap-5">
+        <div className="max-w-4xl">
           <img
             src={COMMUNITY_HERO_ART_URL}
             alt="COOLAB community illustration"
-            className="mt-1 h-auto w-24 shrink-0 rounded-[1.4rem] border border-[var(--line)] bg-white/88 object-cover shadow-[0_16px_40px_rgba(17,17,17,0.08)] sm:w-28 lg:w-32"
+            className="h-auto w-24 rounded-[1.4rem] border border-[var(--line)] bg-white/88 object-cover shadow-[0_16px_40px_rgba(17,17,17,0.08)] sm:w-28 lg:w-32"
           />
-          <div className="min-w-0">
-            <div className="inline-flex items-center rounded-full bg-white/74 px-4 py-2 text-sm text-[var(--muted)] shadow-sm ring-1 ring-[var(--line)] backdrop-blur">
-              COOLAB Community
-            </div>
-            <h1 className="mt-6 max-w-4xl text-4xl font-normal uppercase leading-[1] tracking-[0.01em] sm:text-5xl lg:text-6xl">
-              Lab talk, not lab brochure
-            </h1>
+          <div className="mt-5 inline-flex items-center rounded-full bg-white/74 px-4 py-2 text-sm text-[var(--muted)] shadow-sm ring-1 ring-[var(--line)] backdrop-blur">
+            COOLAB Community
           </div>
+          <h1 className="mt-5 max-w-4xl text-4xl font-normal leading-[1] tracking-[0.01em] sm:text-5xl lg:text-6xl">
+            Bio-Coolab Community
+          </h1>
         </div>
         <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--foreground)]/92 sm:text-2xl">
           A community board for protocols, bench lessons, openings, and PI reviews.
