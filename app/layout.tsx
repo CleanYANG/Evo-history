@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Evo-History",
+  title: "COOLAB Community",
   description:
-    "A project exploring how people make decisions under different environments.",
+    "A public-facing community portal for sharing protocols, lab experience, jobs, and PI reviews.",
 };
 
 export default function RootLayout({

@@ -1,26 +1,34 @@
 export const scenarioCards = [
   {
     index: "01",
-    status: "Scenario",
-    title: "You are a fruit vendor in Rome Empire",
+    status: "Channel",
+    title: "Share Protocols",
     description:
-      "A large ancient city. Crowded streets. Food supply is unstable.",
-    href: "/roman-fruit",
+      "Upload reusable methods, optimized workflows, and practical protocol notes.",
+    href: "#share-protocols",
   },
   {
     index: "02",
-    status: "Scenario",
-    title: "What would you drink in Rome Empire",
+    status: "Channel",
+    title: "Lab Experience",
     description:
-      "A warm, quiet afternoon. You sit down to rest.",
-    href: "/roman-drink",
+      "Post lessons from the bench, failed attempts, fixes, and real lab stories.",
+    href: "#lab-experience",
   },
   {
     index: "03",
-    status: "Scenario",
-    title: "You are writing something-Rome Empire",
+    status: "Channel",
+    title: "Jobs and Opportunities",
     description:
-      "You need to record something. It must be kept for later.",
-    href: "/roman-writing",
+      "Share recruiting needs, collaboration calls, and job-seeking posts.",
+    href: "#jobs-and-opportunities",
+  },
+  {
+    index: "04",
+    status: "Channel",
+    title: "PI Reviews",
+    description:
+      "Collect mentor impressions, lab culture notes, and experience-based reviews.",
+    href: "#pi-reviews",
   },
 ] as const;

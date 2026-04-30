@@ -9,20 +9,20 @@ export function ExploreSection() {
     >
       <div className="max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-[0.16em] text-[var(--accent-strong)]">
-          Explore
+          Channels
         </p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Start exploring
+          Choose what you want to open up
         </h2>
         <div className="mt-4 space-y-1 text-base leading-8 text-[var(--muted)] sm:text-lg">
-          <p>Different environments.</p>
-          <p>Different pressures.</p>
-          <p>Different choices.</p>
-          <p>Different histories.</p>
+          <p>Reusable methods.</p>
+          <p>Real-world experience.</p>
+          <p>Career signals.</p>
+          <p>Lab culture feedback.</p>
         </div>
       </div>
 
-      <div className="mt-14 grid gap-5 lg:grid-cols-3">
+      <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {scenarioCards.map((card) => (
           <Link
             key={card.title}
@@ -40,7 +40,7 @@ export function ExploreSection() {
               {card.description}
             </p>
             <div className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-[var(--accent-strong)]">
-              Enter
+              Open
               <span className="transition group-hover:translate-x-1">→</span>
             </div>
           </Link>

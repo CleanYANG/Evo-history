@@ -8,22 +8,22 @@ export default function Home() {
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <HeroSection />
       <EssaySection
-        eyebrow="Premise"
-        title="What shapes a decision?"
+        eyebrow="Purpose"
+        title="One place for the things labs usually keep fragmented"
         body={[
-          "Human behavior is not random.",
-          "It is shaped by biological instincts, environmental constraints, and social structures.",
-          "These forces shape individual choices — and over time, shape history itself.",
+          "Protocols often live in private folders. Practical lessons live in chat logs. Hiring signals spread by word of mouth.",
+          "This portal is meant to collect useful, experience-based knowledge in a public-facing space connected to the ELN.",
+          "The goal is simple: make useful lab knowledge easier to share, browse, and reuse.",
         ]}
       />
       <EssaySection
         id="how-it-works"
-        eyebrow="Method"
+        eyebrow="Flow"
         title="How it works"
         body={[
-          "You enter a scenario.",
-          "You make a simple choice.",
-          "What you choose reveals what feels natural, familiar, or out of place in a given world.",
+          "Choose a channel based on what you want to contribute or browse.",
+          "Post a method, a bench-side lesson, a job need, or a PI review with clear context.",
+          "Over time, the site becomes a searchable layer of practical research culture beyond the notebook itself.",
         ]}
       />
       <ExploreSection />
