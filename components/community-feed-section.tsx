@@ -1,0 +1,46 @@
+import { recentThreads } from "@/lib/content";
+
+export function CommunityFeedSection() {
+  return (
+    <section className="mx-auto w-full max-w-6xl px-6 py-6 sm:px-8 lg:px-12 lg:py-10">
+      <div className="rounded-[2rem] border border-[var(--line)] bg-[var(--surface-strong)] p-6 shadow-[0_24px_70px_rgba(17,17,17,0.08)]">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div className="text-xs uppercase tracking-[0.16em] text-[var(--accent-strong)]">
+              Community Feed
+            </div>
+            <div className="mt-1 text-lg font-semibold">What people are talking about</div>
+          </div>
+          <div className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-medium text-[var(--accent-strong)]">
+            live
+          </div>
+        </div>
+        <div className="mt-6 rounded-[1.4rem] bg-white px-4 py-4 ring-1 ring-[var(--line)]">
+          <div className="text-sm text-[var(--muted)]">Start a post</div>
+          <div className="mt-2 text-base text-[var(--foreground)]/70">
+            Share a protocol, failed run, opening, or PI review...
+          </div>
+        </div>
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          {recentThreads.slice(0, 4).map((thread) => (
+            <div
+              key={thread.title}
+              className="rounded-[1.3rem] bg-white/88 px-5 py-5 ring-1 ring-[var(--line)]"
+            >
+              <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-[var(--muted)]">
+                <span>{thread.channel}</span>
+                <span>{thread.freshness}</span>
+              </div>
+              <div className="mt-2 text-base font-medium leading-7 text-[var(--foreground)]">
+                {thread.title}
+              </div>
+              <div className="mt-3 text-sm text-[var(--accent-strong)]">
+                {thread.replies} replies
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

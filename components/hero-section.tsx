@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { hotTags, quickStats, recentThreads } from "@/lib/content";
+import { hotTags, quickStats } from "@/lib/content";
 
 const COMMUNITY_HERO_ART_URL =
   "https://raw.githubusercontent.com/CleanYANG/Evo-history/main/assats/%E7%A4%BE%E5%8C%BA%E7%95%8C%E9%9D%A2%E7%94%A8.png";
 
 export function HeroSection() {
   return (
-    <section className="mx-auto grid min-h-[72vh] w-full max-w-6xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.9fr)] lg:px-12 lg:py-24">
+    <section className="mx-auto min-h-[60vh] w-full max-w-6xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
       <div className="max-w-4xl">
         <div className="max-w-4xl">
           <img
@@ -62,47 +62,6 @@ export function HeroSection() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="flex items-start lg:pt-8">
-        <div className="w-full rounded-[2rem] border border-[var(--line)] bg-[var(--surface-strong)] p-6 shadow-[0_24px_70px_rgba(17,17,17,0.08)]">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-xs uppercase tracking-[0.16em] text-[var(--accent-strong)]">
-                Community Feed
-              </div>
-              <div className="mt-1 text-lg font-semibold">What people are talking about</div>
-            </div>
-            <div className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-medium text-[var(--accent-strong)]">
-              live
-            </div>
-          </div>
-          <div className="mt-6 rounded-[1.4rem] bg-white px-4 py-4 ring-1 ring-[var(--line)]">
-            <div className="text-sm text-[var(--muted)]">Start a post</div>
-            <div className="mt-2 text-base text-[var(--foreground)]/70">
-              Share a protocol, failed run, opening, or PI review...
-            </div>
-          </div>
-          <div className="mt-6 space-y-4">
-            {recentThreads.slice(0, 2).map((thread) => (
-              <div
-                key={thread.title}
-                className="rounded-[1.3rem] bg-white/88 px-5 py-5 ring-1 ring-[var(--line)]"
-              >
-                <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-[var(--muted)]">
-                  <span>{thread.channel}</span>
-                  <span>{thread.freshness}</span>
-                </div>
-                <div className="mt-2 text-base font-medium leading-7 text-[var(--foreground)]">
-                  {thread.title}
-                </div>
-                <div className="mt-3 text-sm text-[var(--accent-strong)]">
-                  {thread.replies} replies
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
