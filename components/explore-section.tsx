@@ -12,14 +12,11 @@ export function ExploreSection() {
           Channels
         </p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Choose what you want to open up
+          Enter the right room
         </h2>
-        <div className="mt-4 space-y-1 text-base leading-8 text-[var(--muted)] sm:text-lg">
-          <p>Reusable methods.</p>
-          <p>Real-world experience.</p>
-          <p>Career signals.</p>
-          <p>Lab culture feedback.</p>
-        </div>
+        <p className="mt-4 max-w-xl text-base leading-8 text-[var(--muted)] sm:text-lg">
+          Each channel should feel like a room in a forum, not a static feature card.
+        </p>
       </div>
 
       <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -39,8 +36,12 @@ export function ExploreSection() {
             <p className="mt-4 max-w-xs text-sm leading-7 text-[var(--muted)]">
               {card.description}
             </p>
-            <div className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-[var(--accent-strong)]">
-              Open
+            <div className="mt-6 rounded-[1.1rem] bg-[var(--accent)]/55 px-4 py-3 text-sm text-[var(--foreground)]">
+              <div className="font-medium text-[var(--accent-strong)]">{card.threadCount}</div>
+              <div className="mt-1 leading-6 text-[var(--muted)]">{card.pulse}</div>
+            </div>
+            <div className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[var(--accent-strong)]">
+              Open channel
               <span className="transition group-hover:translate-x-1">→</span>
             </div>
           </Link>

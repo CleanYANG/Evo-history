@@ -8,6 +8,8 @@
   --muted: #616771;
   --line: rgba(17, 17, 17, 0.08);
   --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 250, 241, 0.9);
+  --surface-soft: rgba(247, 244, 236, 0.88);
   --accent: #ddece7;
   --accent-strong: #305f53;
   --shadow: 0 20px 60px rgba(17, 17, 17, 0.05);
@@ -24,7 +26,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top, rgba(221, 236, 231, 0.68), transparent 28%),
+    radial-gradient(circle at top left, rgba(221, 236, 231, 0.68), transparent 24%),
+    radial-gradient(circle at 85% 12%, rgba(246, 219, 179, 0.48), transparent 18%),
     var(--background);
   color: var(--foreground);
   font-family:
