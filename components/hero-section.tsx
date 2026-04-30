@@ -1,16 +1,28 @@
 import Link from "next/link";
 import { hotTags, quickStats, recentThreads } from "@/lib/content";
 
+const COMMUNITY_HERO_ART_URL =
+  "https://raw.githubusercontent.com/CleanYANG/Evo-history/main/assats/%E7%A4%BE%E5%8C%BA%E7%95%8C%E9%9D%A2%E7%94%A8.png";
+
 export function HeroSection() {
   return (
     <section className="mx-auto grid min-h-[78vh] w-full max-w-6xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:px-12 lg:py-20">
       <div className="max-w-4xl">
-        <div className="inline-flex items-center rounded-full bg-white/74 px-4 py-2 text-sm text-[var(--muted)] shadow-sm ring-1 ring-[var(--line)] backdrop-blur">
-          COOLAB Community
+        <div className="flex items-start gap-5">
+          <img
+            src={COMMUNITY_HERO_ART_URL}
+            alt="COOLAB community illustration"
+            className="mt-1 h-auto w-24 shrink-0 rounded-[1.4rem] border border-[var(--line)] bg-white/88 object-cover shadow-[0_16px_40px_rgba(17,17,17,0.08)] sm:w-28 lg:w-32"
+          />
+          <div className="min-w-0">
+            <div className="inline-flex items-center rounded-full bg-white/74 px-4 py-2 text-sm text-[var(--muted)] shadow-sm ring-1 ring-[var(--line)] backdrop-blur">
+              COOLAB Community
+            </div>
+            <h1 className="mt-6 max-w-5xl text-5xl font-semibold uppercase leading-[0.96] tracking-[0.01em] sm:text-6xl lg:text-7xl">
+              Lab talk, not lab brochure
+            </h1>
+          </div>
         </div>
-        <h1 className="mt-8 max-w-5xl text-5xl font-semibold uppercase leading-[0.96] tracking-[0.01em] sm:text-6xl lg:text-7xl">
-          Lab talk, not lab brochure
-        </h1>
         <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--foreground)]/92 sm:text-2xl">
           A community board for protocols, bench lessons, openings, and PI reviews.
         </p>
