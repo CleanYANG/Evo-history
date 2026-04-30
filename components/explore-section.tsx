@@ -5,7 +5,7 @@ export function ExploreSection() {
   return (
     <section
       id="explore"
-      className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 lg:px-12"
+      className="mx-auto w-full max-w-6xl px-6 py-18 sm:px-8 lg:px-12 lg:py-24"
     >
       <div className="max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-[0.16em] text-[var(--accent-strong)]">
@@ -19,21 +19,21 @@ export function ExploreSection() {
         </p>
       </div>
 
-      <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
         {scenarioCards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="group rounded-[2rem] bg-[var(--surface)] p-6 shadow-[var(--shadow)] ring-1 ring-[var(--line)] backdrop-blur-sm transition duration-200 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,17,17,0.08)]"
+            className="group rounded-[2rem] bg-[var(--surface)] p-7 shadow-[var(--shadow)] ring-1 ring-[var(--line)] backdrop-blur-sm transition duration-200 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(17,17,17,0.08)]"
           >
             <div className="flex items-center justify-between text-sm text-[var(--muted)]">
               <span>{card.index}</span>
               <span>{card.status}</span>
             </div>
-            <h3 className="mt-12 text-2xl font-medium tracking-tight text-[var(--foreground)]">
+            <h3 className="mt-10 text-2xl font-medium tracking-tight text-[var(--foreground)]">
               {card.title}
             </h3>
-            <p className="mt-4 max-w-xs text-sm leading-7 text-[var(--muted)]">
+            <p className="mt-4 max-w-sm text-sm leading-7 text-[var(--muted)]">
               {card.description}
             </p>
             <div className="mt-6 rounded-[1.1rem] bg-[var(--accent)]/55 px-4 py-3 text-sm text-[var(--foreground)]">

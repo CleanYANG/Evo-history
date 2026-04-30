@@ -6,7 +6,7 @@ const COMMUNITY_HERO_ART_URL =
 
 export function HeroSection() {
   return (
-    <section className="mx-auto grid min-h-[78vh] w-full max-w-6xl gap-10 px-6 py-16 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:px-12 lg:py-20">
+    <section className="mx-auto grid min-h-[72vh] w-full max-w-6xl gap-12 px-6 py-20 sm:px-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.9fr)] lg:px-12 lg:py-24">
       <div className="max-w-4xl">
         <div className="max-w-4xl">
           <img
@@ -21,20 +21,20 @@ export function HeroSection() {
             Bio-Coolab Community
           </h1>
         </div>
-        <p className="mt-6 max-w-3xl text-xl leading-8 text-[var(--foreground)]/92 sm:text-2xl">
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--foreground)]/88 sm:text-xl">
           A community board for protocols, bench lessons, openings, and PI reviews.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          {hotTags.map((tag) => (
+        <div className="mt-10 flex flex-wrap gap-3">
+          {hotTags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-white/78 px-4 py-2 text-sm text-[var(--foreground)] shadow-sm ring-1 ring-[var(--line)]"
+              className="rounded-full bg-white/78 px-4 py-2 text-sm text-[var(--foreground)]/86 shadow-sm ring-1 ring-[var(--line)]"
             >
               #{tag}
             </span>
           ))}
         </div>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-12 flex flex-wrap gap-4">
           <Link
             href="#explore"
             className="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-base font-medium text-white transition hover:-translate-y-0.5 hover:bg-[var(--accent-strong)]"
@@ -48,11 +48,11 @@ export function HeroSection() {
             See live vibe
           </Link>
         </div>
-        <div className="mt-10 grid gap-3 sm:grid-cols-3">
-          {quickStats.map((stat) => (
+        <div className="mt-14 grid max-w-2xl gap-3 sm:grid-cols-2">
+          {quickStats.slice(0, 2).map((stat) => (
             <div
               key={stat.label}
-              className="rounded-[1.4rem] bg-white/72 px-5 py-4 shadow-[var(--shadow)] ring-1 ring-[var(--line)]"
+              className="rounded-[1.4rem] bg-white/64 px-5 py-4 shadow-[var(--shadow)] ring-1 ring-[var(--line)]"
             >
               <div className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
                 {stat.label}
@@ -65,8 +65,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="flex items-center">
-        <div className="w-full rounded-[2rem] border border-[var(--line)] bg-[var(--surface-strong)] p-5 shadow-[0_24px_70px_rgba(17,17,17,0.08)]">
+      <div className="flex items-start lg:pt-8">
+        <div className="w-full rounded-[2rem] border border-[var(--line)] bg-[var(--surface-strong)] p-6 shadow-[0_24px_70px_rgba(17,17,17,0.08)]">
           <div className="flex items-center justify-between">
             <div>
               <div className="text-xs uppercase tracking-[0.16em] text-[var(--accent-strong)]">
@@ -78,17 +78,17 @@ export function HeroSection() {
               live
             </div>
           </div>
-          <div className="mt-5 rounded-[1.4rem] bg-white px-4 py-3 ring-1 ring-[var(--line)]">
+          <div className="mt-6 rounded-[1.4rem] bg-white px-4 py-4 ring-1 ring-[var(--line)]">
             <div className="text-sm text-[var(--muted)]">Start a post</div>
             <div className="mt-2 text-base text-[var(--foreground)]/70">
               Share a protocol, failed run, opening, or PI review...
             </div>
           </div>
-          <div className="mt-4 space-y-3">
-            {recentThreads.slice(0, 3).map((thread) => (
+          <div className="mt-6 space-y-4">
+            {recentThreads.slice(0, 2).map((thread) => (
               <div
                 key={thread.title}
-                className="rounded-[1.3rem] bg-white/88 px-4 py-4 ring-1 ring-[var(--line)]"
+                className="rounded-[1.3rem] bg-white/88 px-5 py-5 ring-1 ring-[var(--line)]"
               >
                 <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.14em] text-[var(--muted)]">
                   <span>{thread.channel}</span>
