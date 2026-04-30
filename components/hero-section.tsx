@@ -18,7 +18,7 @@ export function HeroSection() {
             <div className="inline-flex items-center rounded-full bg-white/74 px-4 py-2 text-sm text-[var(--muted)] shadow-sm ring-1 ring-[var(--line)] backdrop-blur">
               COOLAB Community
             </div>
-            <h1 className="mt-6 max-w-5xl text-5xl font-semibold uppercase leading-[0.96] tracking-[0.01em] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-4xl text-4xl font-normal uppercase leading-[1] tracking-[0.01em] sm:text-5xl lg:text-6xl">
               Lab talk, not lab brochure
             </h1>
           </div>
